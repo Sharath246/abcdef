@@ -2,4 +2,4 @@ name: CI
 on: [push,pull_request,workflow_call]
 jobs:
   call-something:
-    uses: ${{github.server_url}}/${{github.repository_owner}}/cicd/.github/workflows/nodebuild.yml
+    uses: ${{github.server_url}}/${{github.repository_owner}}/cicd/.github/workflows/nodebuild.yml@main
