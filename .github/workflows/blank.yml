@@ -1,10 +1,9 @@
 name: CI
-on: 
-  push:
-    branches:
-      - main
+on: push
 jobs:
   Heoll:
     runs-on: macOS-latest
     steps:
-      - run: echo "hello"
+      - run: echo "${{github.ref}}"
+      - if: ${{github.ref}} == "main"
+        run: echo "This is the main branch"
