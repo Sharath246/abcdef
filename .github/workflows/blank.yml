@@ -1,0 +1,12 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on: [push,pull_request,workflow_call]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  call-something:
+    uses: ${{github.server_url}}/${{github.repository_owner}}/cicd/.github/workflows/nodebuild.yml
