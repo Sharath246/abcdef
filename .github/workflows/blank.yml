@@ -1,5 +1,10 @@
 name: CI
-on: [push,pull_request,workflow_call]
+on: 
+  push:
+    branches:
+      - main
 jobs:
-  call-something:
-    uses: Sharath246/cicd/.github/workflows/nodebuild.yml@actions
+  Heoll:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello"
