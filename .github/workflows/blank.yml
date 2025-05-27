@@ -7,4 +7,7 @@ jobs:
   Heoll:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello"
+      - uses: peter-evans/repository-dispatch@v3
+        with:
+          repo: Sharath246/cicd
+          event-type: abcd
