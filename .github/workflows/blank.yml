@@ -9,5 +9,5 @@ jobs:
     steps:
       - uses: peter-evans/repository-dispatch@v3
         with:
-          repo: Sharath246/cicd
+          repository: Sharath246/cicd
           event-type: abcd
