@@ -10,4 +10,5 @@ jobs:
       - uses: peter-evans/repository-dispatch@v3
         with:
           repository: Sharath246/cicd
+          token: ${{secrets.CICDTOKEN}}
           event-type: abcd
