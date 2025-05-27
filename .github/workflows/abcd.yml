@@ -1,0 +1,15 @@
+name: Triggered by Repo A's Workflow Completion
+
+on:
+  workflow_run:
+    workflows: ["Node.js CI"]  # Must match the name in repo-a exactly
+    types:
+      - completed
+
+jobs:
+  react-to-repo-a:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hi
+        run: echo "hi"
