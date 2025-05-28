@@ -6,7 +6,7 @@ on:
 jobs:
   Heoll:
     outputs:
-      greetings: ${{steps.wew.greeting}}
+      greetings: ${{steps.wew.outputs.greeting}}
     runs-on: ubuntu-latest
     steps:
       - name: hello
