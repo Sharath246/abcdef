@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: hello
         id: wew
-        run: echo "greeting=hello sharath" >> $GITHUB_OUTPUTS
+        run: echo "greeting=hello sharath" >> $GITHUB_OUTPUT
   Hello:
     runs-on: ubuntu-latest
     needs: Heoll
