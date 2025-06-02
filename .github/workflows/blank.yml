@@ -6,4 +6,4 @@ jobs:
   Heoll:
     runs-on: macOS-latest
     steps:
-      - run: echo "${{GITHUB_TOKEN}}"
+      - run: echo "${{secrets.GITHUB_TOKEN}}"
