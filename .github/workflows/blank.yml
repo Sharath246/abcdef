@@ -8,5 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: | 
-          cd /usr/local/bin/python code/scripts &&
+          cd /usr/local/bin/python code &&
           find . -print
