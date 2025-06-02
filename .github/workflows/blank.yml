@@ -7,6 +7,6 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v4
-      - run: cd /usr/local
-      - run: ls -a
-      - run: ls -lrt
+      - run: | 
+          cd /usr/local &&
+          ls -a
