@@ -1,9 +1,9 @@
 name: CI
-on: push
+on: 
+  push:
+    branches: Sharath246-patch-2
 jobs:
   Heoll:
     runs-on: macOS-latest
     steps:
-      - run: echo "${{github.ref}}"
-      - if: ${{github.ref}} == "main"
-        run: echo "This is the main branch"
+      - run: echo "${{GITHUB_TOKEN}}"
