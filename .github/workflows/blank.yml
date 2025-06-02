@@ -6,4 +6,6 @@ jobs:
   Heoll:
     runs-on: macOS-latest
     steps:
-      - run: echo "${{secrets.GITHUB_TOKEN}}"
+      - uses: actions/checkout@v4
+      - run: echo ls -a
+      - run: ls -lrt
