@@ -9,4 +9,4 @@ jobs:
       - uses: actions/checkout@v4
       - run: | 
           cd /usr/local &&
-          ls -a
+          find . -print
