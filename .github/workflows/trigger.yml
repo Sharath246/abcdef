@@ -1,5 +1,14 @@
 name: trigger
-on: push
+on: 
+  workflow_dispatch:
+    inputs:
+      sele:
+        description: asads
+        type: choice
+        options:
+          - a
+          - b
+          - c
 jobs:
   abcd:
     runs-on: ubuntu-latest
