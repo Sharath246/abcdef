@@ -4,5 +4,5 @@ jobs:
   abcd:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{GITHUB_CONTEXT.actor}}"
+      - run: echo "${{github.actor}}"
         
