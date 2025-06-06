@@ -3,11 +3,9 @@
 a=10
 
 while true; do
-  $a = $a+10;
+  ((a = a + 10))  # or ((a += 10))
   if [ $a -gt 100 ]; then 
-    echo "100 completed" 
-    break 
+    echo "100 completed"
+    break
   fi
 done
-
-  
