@@ -4,7 +4,7 @@ jobs:
   abcd:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          ./.github/workflows/do.sh
+      - uses: actions/checkout@v4
+      - run: ./.github/workflows/do.sh
         shell: bash
         
