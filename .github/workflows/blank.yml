@@ -2,7 +2,7 @@ name: CI test
 on: 
   push:
     branches:
-      - main
+      - abcd
 jobs:
   Heoll:
     outputs:
