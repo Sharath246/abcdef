@@ -3,20 +3,13 @@ on:
   workflow_dispatch:
     inputs:
       sele:
-        description: asads
-        type: choice
-        options:
-          - a
-      sefsef:
-        description: asd
-        type: choice
-        options:
-          - b
-      asdasdasdas:
-        description: asd
-        type: choice
-        options:
-          - c
+        type: boolean
+      seleadsas:
+        type: boolean
+      seledasdasd:
+        type: boolean
+      sdasdasdasdasdasda:
+        type: boolean
 jobs:
   abcd:
     runs-on: ubuntu-latest
