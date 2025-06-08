@@ -3,12 +3,16 @@ on:
   workflow_dispatch:
     inputs:
       sele:
+        description: Aasdasdasd
         type: boolean
       seleadsas:
+        description: werwerwerwerqwe
         type: boolean
       seledasdasd:
+        description: aerwerwerwer
         type: boolean
       sdasdasdasdasdasda:
+        description: sdfsdfsdf
         type: boolean
 jobs:
   abcd:
