@@ -1,11 +1,14 @@
 name: trigger
+
+env:
+  type: string
+
 on: 
   workflow_dispatch:
     inputs:
       sele:
-        options:
-          - as
-          - ass
+        type: choice
+        default: adasd
       seleadsas:
         description: werwerwerwerqwe
         type: boolean
