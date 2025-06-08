@@ -3,7 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       sele:
-        description: Aasdasdasd
+        options:
+          - as
+          - ass
         type: boolean
       seleadsas:
         description: werwerwerwerqwe
