@@ -7,7 +7,15 @@ on:
         type: choice
         options:
           - a
+      sefsef:
+        description: asd
+        type: choice
+        options:
           - b
+      asdasdasdas:
+        description: asd
+        type: choice
+        options:
           - c
 jobs:
   abcd:
