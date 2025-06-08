@@ -6,7 +6,6 @@ on:
         options:
           - as
           - ass
-        type: boolean
       seleadsas:
         description: werwerwerwerqwe
         type: boolean
