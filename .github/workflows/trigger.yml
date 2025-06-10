@@ -1,26 +1,19 @@
 name: trigger
 
-env:
-  type: string
-
 on: 
   workflow_dispatch:
     inputs:
-      sele:
-        type: choice
-        default: adasd
-      seleadsas:
-        description: werwerwerwerqwe
-        type: boolean
-      seledasdasd:
-        description: aerwerwerwer
-        type: boolean
-      sdasdasdasdasdasda:
-        description: sdfsdfsdf
-        type: boolean
+      markers:
+        type: string
+        default: ""
 jobs:
   abcd:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{github.actor}}"
+      - name: custom marker builder
+        id: custom-marker
+        env:
+          MARKERS: ${{ github.event.inputs.markers }}
+        run: |
+          echo "${MARKERS//,/ | }"
         
