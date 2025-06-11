@@ -4,10 +4,6 @@ on:
     branches: Sharath246-patch-2
 jobs:
   Heoll:
-    runs-on: macOS-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: echo "hello"
-      - uses: ./.github/workflows/abcd.yml
-        with:
-          name: sher
+    uses: ./.github/workflows/abcd.yml
+    with:
+      name: sher
