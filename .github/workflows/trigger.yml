@@ -8,7 +8,7 @@ jobs:
       - name: custom marker builder
         id: custom-marker
         env:
-          MARKERS: "asdjbaskd\\n\\nasdas\\nasdasd"
+          MARKERS: "asdjbaskd\n\nasdas\nasdasd"
         run: |
-          echo "${MARKERS//\n/<br>}"
+          echo -e "${MARKERS//\n/<br>}"
         
