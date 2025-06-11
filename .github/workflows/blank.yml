@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: echo "hello"
-      - uses: "./.github/workflows/abcd.yml"
+      - uses: ./.github/workflows/abcd.yml
         with:
           name: sher
