@@ -1,0 +1,14 @@
+name: asasd
+
+on: 
+  workflow_call:
+    inputs:
+      name:
+        type: string
+        default: ""
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello ${{github.event.inputs.name}}"
