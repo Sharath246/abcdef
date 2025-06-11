@@ -10,5 +10,6 @@ jobs:
         env:
           MARKERS: "asdjbaskd\n\nasdas\nasdasd"
         run: |
-          echo -e "${MARKERS//\n/<br>}"
+          conv=$(echo "$MARKERS" | tr '\n' '<br>')
+          echo "$conv"
         
