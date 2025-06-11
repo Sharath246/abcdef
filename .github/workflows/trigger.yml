@@ -10,5 +10,5 @@ jobs:
         env:
           MARKERS: "asdjbaskd\n\nasdas\nasdasd"
         run: |
-          echo "$MARKERS" | paste -sd'<br>' -
+          echo "$MARKERS" | paste -sd'<br\>' -
         
