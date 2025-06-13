@@ -13,6 +13,6 @@ jobs:
       - name: custom marker builder
         id: custom-marker
         run: |
-          checked "${{github.event.inputs.a}}"
+          checked=${{github.event.inputs.a}}
           if checked; echo "true $checked"; else echo "false $checked"; fi
         
