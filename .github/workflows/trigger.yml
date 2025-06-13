@@ -1,14 +1,18 @@
 name: trigger
 
-on: push
+on: 
+  workflow_dispatch:
+    inputs:
+      a:
+        type: boolean
+        default: true
 jobs:
   abcd:
     runs-on: ubuntu-latest
     steps:
       - name: custom marker builder
         id: custom-marker
-        env:
-          MARKERS: "asdjbaskd\n\nasdas\nasdasd"
         run: |
-          echo "$MARKERS" | awk 'BEGIN{ORS="<br>"} {print}'
+          checked "${{github.event.inputs.a}}"
+          if checked; echo "true $checked"; else echo "false $checked"; fi
         
