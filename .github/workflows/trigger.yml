@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: custom marker builder
         id: custom-marker
-        run: echo ${{github.event}}
+        run: echo "${{github.event}}"
         
