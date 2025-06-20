@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: custom marker builder
         id: custom-marker
-        run: echo "${{fromJson(github.event)}}"
+        run: echo "${{toJson(github.event)}}"
         
