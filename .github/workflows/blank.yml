@@ -8,7 +8,5 @@ jobs:
         id: wew
         run: |
           echo "greeting=hello" >> $GITHUB_OUTPUT
-          echo $GITHUB_OUTPUT >> abc.txt
-          cat abc.txt
-          echo $GITHUB_OUTPUT
+          cat $GITHUB_OUTPUT
           
