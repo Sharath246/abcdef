@@ -1,5 +1,5 @@
 name: CI test
-on: worklflow_call
+on: workflow_call
 jobs:
   Heoll:
     runs-on: ubuntu-latest
