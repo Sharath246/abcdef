@@ -5,10 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          ls
-          cd $GITHUB_WORKSPACE
-          ls
+      - run: echo "$GITHUB_WORKSPACE"
+      - run: echo "$WORKSPACE"
       - name: hello
         id: wew
         run: |
