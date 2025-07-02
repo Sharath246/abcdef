@@ -11,6 +11,5 @@ jobs:
       - name: hello
         id: wew
         run: |
-          echo "greeting=hello" >> $GITHUB_OUTPUT
-          cat $GITHUB_OUTPUT
+          echo "greeting=hello" >&2
           
