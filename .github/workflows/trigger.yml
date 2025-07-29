@@ -11,7 +11,7 @@ on:
         default: main
 jobs:
   abcd:
-    if: github.event.inputs.a == true && github.event.inputs.b == 'main'
+    if: ${{github.event.inputs.a == 'true' && github.event.inputs.b == 'main'}}
     runs-on: ubuntu-latest
     steps:
         - run: echo "hello"
@@ -20,5 +20,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: xutur
-          if: github.event.inputs.a == true
+          if: ${{github.event.inputs.a == 'true'}}
           run: echo "${{github.event.inputs.b}}"
