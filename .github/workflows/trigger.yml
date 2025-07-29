@@ -14,5 +14,5 @@ jobs:
     if: github.event.inputs.a == true && github.event.inputs.b == 'main'
     runs-on: ubuntu-latest
     steps:
-        run: echo "hello"
+        - run: echo "hello"
         
