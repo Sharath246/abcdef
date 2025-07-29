@@ -15,4 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - run: echo "hello"
-        
+  abcde:
+    #if: github.event.inputs.a == true && github.event.inputs.b == 'main'
+    runs-on: ubuntu-latest
+    steps:
+        - name: xutur
+          if: github.event.inputs.a == true
+        - run: echo "${{github.event.inputs.b}}"
