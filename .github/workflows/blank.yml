@@ -4,12 +4,6 @@ jobs:
   Heoll:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: echo "$GITHUB_WORKSPACE"
-      - run: cd "$GITHUB_WORKSPACE"
-      - run: ls
-      - name: hello
-        id: wew
-        run: |
-          echo "greeting=hello" >&2
+      - run: echo ${{secrets.CICDTOKEN}}
+      - run: echo ${{secrets.cicdtoken}}
           
