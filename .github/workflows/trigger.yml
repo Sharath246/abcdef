@@ -6,11 +6,13 @@ on:
       a:
         type: boolean
         default: true
+      b:
+        type: string
+        default: main
 jobs:
   abcd:
+    if: github.event.inputs.a == true && github.event.inputs.b == 'main'
     runs-on: ubuntu-latest
     steps:
-      - name: custom marker builder
-        id: custom-marker
-        run: echo "${{toJson(github.event)}}"
+        run: echo "hello"
         
