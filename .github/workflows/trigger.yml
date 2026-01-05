@@ -32,6 +32,9 @@ jobs:
           id: set-code-coverage-result
           run: |
             temp="temp"
-            echo "code-coverage-result=$temp\n$RESULT" >> $GITHUB_OUTPUT
+            echo "code-coverage-result<<EOF" >> $GITHUB_OUTPUT
+            $(printf "%s\n%s" "$temp" "$RESULT") >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            # echo "code-coverage-result=$temp\n$RESULT" >> $GITHUB_OUTPUT
         - name: awe
           run: echo ${{steps.set-code-coverage-result.outputs.code-coverage-result}}
