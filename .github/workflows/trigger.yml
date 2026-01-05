@@ -8,13 +8,28 @@ on:
         default: true
 jobs:
   abcd:
+    outputs:
+      summary: ${{steps.id.summary}}
     if: ${{github.event.inputs.a == 'true'}}
     runs-on: ubuntu-latest
     steps:
+        - name: bacd
+          id: id
+          run: |
+            echo "summary<<EOF" >> $GITHUB_OUTPUT
+            echo -e "abcd" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
         - run: echo "hello from 1"
   abcde:
     needs: abcd
     runs-on: ubuntu-latest
+    env:
+      RESULT: ${{needs.abcd.outputs.summary}}
     steps:
         - name: xutur
           run: echo "Hello from 2"
+        - name: set-code-coverage-result
+          id: set-code-coverage-result
+          run: |
+            temp="temp"
+            echo "code-coverage-result=$temp\n$Result" >> $GITHUB_OUTPUT
