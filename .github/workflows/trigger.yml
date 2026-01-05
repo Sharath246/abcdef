@@ -33,3 +33,5 @@ jobs:
           run: |
             temp="temp"
             echo "code-coverage-result=$temp\n$Result" >> $GITHUB_OUTPUT
+        - name: awe
+          run: echo ${{steps.set-code-coverage-result.outputs.code-coverage-result}}
