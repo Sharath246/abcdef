@@ -27,11 +27,11 @@ jobs:
       RESULT: ${{needs.abcd.outputs.summary}}
     steps:
         - name: xutur
-          run: echo "Hello from 2"
+          run: echo $RESULT
         - name: set-code-coverage-result
           id: set-code-coverage-result
           run: |
             temp="temp"
-            echo "code-coverage-result=$temp\n$Result" >> $GITHUB_OUTPUT
+            echo "code-coverage-result=$temp\n$RESULT" >> $GITHUB_OUTPUT
         - name: awe
           run: echo ${{steps.set-code-coverage-result.outputs.code-coverage-result}}
