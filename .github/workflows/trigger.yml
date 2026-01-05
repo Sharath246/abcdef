@@ -9,7 +9,7 @@ on:
 jobs:
   abcd:
     outputs:
-      summary: ${{steps.id.summary}}
+      summary: ${{steps.id.outputs.summary}}
     if: ${{github.event.inputs.a == 'true'}}
     runs-on: ubuntu-latest
     steps:
